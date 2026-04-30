@@ -1,0 +1,17 @@
+.venv
+venv
+env
+.env
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.DS_Store
+*.db
+pipeline_errors.log
+pipeline_state.json
+logs/
+.git/
+.github/
+.vscode/
+.idea/

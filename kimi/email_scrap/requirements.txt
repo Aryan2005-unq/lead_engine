@@ -1,0 +1,73 @@
+# CRWM Email Scraping - Error Dashboard & Pipeline Dependencies
+# ============================================
+# This file contains dependencies for:
+# - Error Dashboard system
+# - Pipeline system (Update-robocall-leads)
+
+# ============================================
+# Backend API Dependencies (FastAPI)
+# ============================================
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+gunicorn>=21.0.0
+python-multipart==0.0.6
+
+starlette>=0.27.0
+
+# Database (PostgreSQL)
+psycopg2-binary>=2.9.0  # Sync PostgreSQL client
+sqlalchemy>=2.0.0
+asyncpg>=0.28.0  # Async client option
+
+# Authentication & Security
+pydantic==2.5.0
+pydantic_settings>=2.0.0  # For configuration management
+python-jose[cryptography]==3.3.0
+bcrypt==5.0.0
+passlib[bcrypt]==1.7.4  # Password hashing
+itsdangerous>=2.0.0    # For SessionMiddleware
+email-validator>=2.0.0 # For Pydantic EmailStr validation
+
+
+
+# ============================================
+# Error Dashboard Dependencies
+# ============================================
+aiofiles==23.2.1  # Async file operations
+python-dotenv==1.0.0  # Environment variable management
+jinja2==3.1.2  # Template engine for HTML rendering
+
+# ============================================
+# Pipeline Dependencies
+# ============================================
+# Browser Automation (Core)
+playwright>=1.35.0
+
+# Scraping & API
+apify-client
+curl-cffi>=0.5.0  # Faster requests with browser masquerading
+beautifulsoup4>=4.12.0  # HTML parsing
+
+# Utilities
+requests  # For API calls
+psutil  # For process monitoring
+redis>=5.0.0  # Distributed state management
+
+
+# ============================================
+# Optional Tools (LinkedIn & AI)
+# ============================================
+# 🚨 Windows Users: If you are running the Optional LinkedIn & AI scraping tools,
+# please install dependencies from 'requirements-linkedin.txt' instead if you have
+# Windows Long Paths enabled, or want to fix OSError due to deep paths.
+#
+# pandas>=2.0.0
+# crawl4ai>=0.2.0
+# openai>=1.0.0
+
+# ============================================
+# Installation Instructions
+# ============================================
+# 1. pip install -r requirements.txt
+# 2. playwright install  (to install browser binaries)
+# 3. Create .env file with database credentials (see README.md or DOCKER_SETUP.md)

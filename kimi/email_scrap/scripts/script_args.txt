@@ -1,0 +1,18 @@
+Script: linkdin/scrape.py
+Args: None
+
+Script: linkdin/merge_csv.py
+Args: None
+
+Script: linkdin/scrape_emails.py
+Args: None
+
+Script: All/usa_list/verify_leads_fast.py
+Args: listings_rel, usa_list_rel
+
+Script: All/non_usa_list/non_usa_list_creater.py
+Args: None
+
+Script: Merging/all_merged_csv.py
+Args: None
+
