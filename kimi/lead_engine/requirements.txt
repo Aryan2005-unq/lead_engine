@@ -1,0 +1,16 @@
+# ============================================
+# Lead Extraction Engine — Dependencies
+# ============================================
+
+# Database
+psycopg2-binary>=2.9.0
+
+# HTTP & Scraping
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+playwright>=1.40.0
+
+# Environment
+python-dotenv>=1.0.0
+
+# CLI (included in stdlib: argparse, csv, json, logging)
